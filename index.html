@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            color:black;
+            line-height: 67.5px;
+            font-size: 45px;
+            font-weight: 700;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        .container p{
+            width: 1288px;
+            height: 108px;
+            font-size:18px ;
+            font-weight:400;
+            line-height:27px;
+            text-align: center;
+        }
+        .container2{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .content-box {
+            display: flex;
+            justify-content: space-evenly;
+            background: #FCEFE5;
+            padding: 40px;
+            border-radius: 10px;
+            width: 1436px;
+            height: 380px;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        .buttons a {
+            text-decoration: none;
+            padding: 10px;
+            width: 348px;
+            height:42px;
+            background: white;
+            color: #f7941e;
+            margin-bottom: 10px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .buttons a.active {
+            background: #f7941e;
+            color: white;
+        }
+        .vision-section {
+            display: flex;
+            align-items: center;
+        }
+        .vision-img {
+            width: 414px;
+            height:357px;
+            border-radius: 10px;
+        }
+        .vision-text, .mission-text, .values-text {
+            width: 490px;
+            height: 350px;
+            gap:41px;
+            margin-top: 20px;
+            margin-left: 10px; 
+            display: none; 
+        }  
+        .vision-text img, .mission-text img, .values-text img {
+            width: 60px;
+            height: 58.9px;
+        }
+        .vision-text h2, .mission-text h2, .values-text h2 {
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 52.5px;
+            color: #F9790F;
+        }
+        .vision-text p, .mission-text p, .values-text p {
+            color: #3c4043;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 27px;
+        }
+
+        /* Responsive Breakpoints */
+        @media screen and (max-width: 320px) {
+            .header {
+                font-size: 30px;
+                line-height: 1.2;
+            }
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+            .container p {
+                width: 100%;
+                height: auto;
+                font-size: 14px;
+            }
+            .content-box {
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+            .buttons {
+                width: 100%;
+                margin-top: 0;
+                align-items: center;
+            }
+            .buttons a {
+                width: 90%;
+                height: auto;
+                padding: 8px;
+                font-size: 14px;
+            }
+            .vision-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .vision-img {
+                width: 250px;
+                height: auto;
+                margin-bottom: 15px;
+            }
+            .vision-text, .mission-text, .values-text {
+                width: 100%;
+                height: auto;
+                margin-left: 0;
+                text-align: center;
+            }
+            .vision-text h2, .mission-text h2, .values-text h2 {
+                font-size: 25px;
+            }
+            .vision-text p, .mission-text p, .values-text p {
+                font-size: 14px;
+            }
+        }
+        @media screen and (min-width: 321px) and (max-width: 480px) {
+            .header {
+                font-size: 35px;
+            }
+            .container p {
+                width: 100%;
+                height: auto;
+                font-size: 16px;
+            }
+            .content-box {
+                width: 100%;
+                height: auto;
+                padding: 30px;
+                flex-direction: column;
+            }
+            .buttons a {
+                width: 90%;
+            }
+            .vision-img {
+                width: 300px;
+                height: auto;
+            }
+            .vision-text, .mission-text, .values-text {
+                width: 100%;
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            .content-box {
+                width: 100%;
+                height: auto;
+                flex-direction: column;
+                align-items: center;
+            }
+            .buttons {
+                width: 100%;
+                align-items: center;
+            }
+            .buttons a {
+                width: 70%;
+            }
+            .vision-section {
+                flex-direction: column;
+            }
+            .vision-img {
+                width: 400px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            .vision-text, .mission-text, .values-text {
+                width: 100%;
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .content-box {
+                width: 95%;
+                height: auto;
+                padding: 30px;
+            }
+            .buttons a {
+                width: 300px;
+            }
+            .vision-img {
+                width: 350px;
+                height: auto;
+            }
+            .vision-text, .mission-text, .values-text {
+                width: 450px;
+                margin-left: 20px;
+            }
+        }
+        @media screen and (min-width: 1025px) and (max-width: 1440px) {
+            .content-box {
+                width: 1200px;
+                height: 380px;
+            }
+        }
+        @media screen and (min-width: 1441px) {
+            .content-box {
+                width: 1400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="aboutus"></div>
+    <div class="header">About Us</div>
+    <div class="container">
+        <p>Sri Chaitanya Institute of Technology & Research is situated in Khammam in the Telangana state of India. The college is accredited by AICTE. Sri Chaitanya Institute of Technology & Research offers 14 courses across 2 streams, namely Engineering and Management. Popular degrees offered at Sri Chaitanya Institute of Technology & Research include B.Tech, M.Tech, MBA, and Diploma. Besides a robust teaching pedagogy, Sri Chaitanya Institute of Technology & Research is also a leader in research and innovation</p>
+    </div>
+    <div class="container2">
+        <div class="content-box">
+            <div class="buttons">
+                <a href="#" class="active" data-section="vision">Vision <span>&#8599;</span></a>
+                <a href="#" data-section="mission">Mission <span>&#8599;</span></a>
+                <a href="#" data-section="values">Values <span>&#8599;</span></a>
+            </div>
+            <div class="vision-section">
+                <img src="vision-image.png" alt="Vision" class="vision-img">
+            </div> 
+                <div class="vision-text" id="vision-text">
+                    <img src="visionicon.png">
+                    <h2>Vision</h2>
+                    <p>To be a Centre for Excellence in value based quality Professional Education carving Research, Innovation and Entrepreneurial Attitude that transforms students into globally competent society sensitized engineers.</p>
+                </div>
+                
+                <div class="mission-text" id="mission-text">
+                    <img src="visionicon.png">
+                    <h2>Mission</h2>
+                    <p>To create a student centric institute support with innovative pedagogy, To maximise the utilisation of the state-of-the-art infrastructure for the overall development of the individuals. To encourage independent thinking and application-oriented collaborative research in areas of tropical interest to contribute to the development of the region and the nation.</p>
+                </div>
+                
+                <div class="values-text" id="values-text">
+                    <img src="visionicon.png">
+                    <h2>Values</h2>
+                    <p>Academic and social integrity Celebration of wisdom and excellence to serve humanity Respect of diverse opinion and approach in solving problems</p>
+                </div>
+            
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.buttons a');
+            const textSections = document.querySelectorAll('.vision-text, .mission-text, .values-text');
+            const visionImg = document.querySelector('.vision-img');
+            function showSection(sectionId) {
+                textSections.forEach(section => {
+                    section.style.display = 'none';
+                });
+                buttons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                const selectedSection = document.getElementById(`${sectionId}-text`);
+                if (selectedSection) {
+                    selectedSection.style.display = 'block';
+                }
+                const activeButton = document.querySelector(`[data-section="${sectionId}"]`);
+                if (activeButton) {
+                    activeButton.classList.add('active');
+                }
+            }
+            showSection('vision'); 
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const section = this.getAttribute('data-section');
+                    showSection(section);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
